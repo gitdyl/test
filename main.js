@@ -16,24 +16,24 @@ for retrieving properties (dot notation and brackets).
 
 
 //constructor function - it declares monkey to be an object with properties//
-var Monkey = function(name, species, foodsEaten) {
-	this.name = name 
-	this.species = species
+var Monkey = function(name, breed, foodsEaten) {
+	this.name = name
+	this.species = breed
 	this.foodsEaten = []
 	//invoking the properties of the monkey//
 	this.eatSomething = function(foods) {
 		this.foodsEaten.push(foods)
-		
-		
+
+
 	}
 	this.introduce = function() {
 		console.log('I am', this.name,'.', 'I am a', this.species,'.', 'I like to eat', this.foodsEaten,'.')
 	}
 
-} 
-var gibbon = new Monkey('Gibbon', 'titi', 'foodsEaten') 
+}
+var gibbon = new Monkey('Gibbon', 'titi', 'foodsEaten')
 gibbon.eatSomething('bananas')
-gibbon.eatSomething('nuts')			
+gibbon.eatSomething('nuts')
 gibbon.eatSomething('eggplant')
 console.log(gibbon.foodsEaten)
 
